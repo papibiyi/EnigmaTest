@@ -32,32 +32,36 @@ class EnigmaTests: XCTestCase {
         let expression1: Float = 10
         let expression2: Float = 5
         let expectedResult: Float = 5
+        let actualResult = arithmetic.arithmetic(expression1, expression2: expression2, operation: .subtraction)
         
-        XCTAssertEqual(arithmetic.arithmetic(expression1, expression2: expression2, operation: .subtraction), expectedResult)
+        XCTAssertEqual(actualResult, expectedResult)
     }
     
     func test_arithmetic_subtraction_valid_negative_result() {
         let expression1: Float = 5.0
         let expression2: Float = 20
         let expectedResult: Float = -15
+        let actualResult = arithmetic.arithmetic(expression1, expression2: expression2, operation: .subtraction)
         
-        XCTAssertEqual(arithmetic.arithmetic(expression1, expression2: expression2, operation: .subtraction), expectedResult)
+        XCTAssertEqual(actualResult, expectedResult)
     }
     
     func test_arithmetic_subtraction_for_two_negative_numbers() {
         let expression1: Float = -5
         let expression2: Float = -12.5
         let expectedResult: Float = 7.5
+        let actualResult = arithmetic.arithmetic(expression1, expression2: expression2, operation: .subtraction)
         
-        XCTAssertEqual(arithmetic.arithmetic(expression1, expression2: expression2, operation: .subtraction), expectedResult)
+        XCTAssertEqual(actualResult, expectedResult)
     }
     
     func test_arithmetic_addition_for_two_positive_numbers() {
         let expression1: Float = 10
         let expression2: Float = 5
         let expectedResult: Float = 5
+        let actualResult = arithmetic.arithmetic(expression1, expression2: expression2, operation: .addition)
         
-        XCTAssertEqual(arithmetic.arithmetic(expression1, expression2: expression2, operation: .addition), expectedResult, "\n Holla 😃 I don't know what you've done but i'm expecting \(expression1) - \(expression2) = \(expectedResult) 🤔 \n Fix me or lose your JOB 🌚 \n ASANTE SANA")
+        XCTAssertEqual(actualResult, expectedResult, "\n Holla 😃 I don't know what you've done but i'm expecting \(expression1) - \(expression2) = \(expectedResult) 🤔 \n Fix me or lose your JOB 🌚 \n ASANTE SANA")
 
     }
     
@@ -67,8 +71,9 @@ class EnigmaTests: XCTestCase {
         let expression1: Float = -10
         let expression2: Float = -5
         let expectedResult: Float = -15
+        let actualResult = arithmetic.arithmetic(expression1, expression2: expression2, operation: .addition)
         
-        XCTAssertEqual(arithmetic.arithmetic(expression1, expression2: expression2, operation: .addition), expectedResult)
+        XCTAssertEqual(actualResult, expectedResult)
 
     }
     
@@ -76,8 +81,9 @@ class EnigmaTests: XCTestCase {
         let expression1: Float = -10
         let expression2: Float = 5.3
         let expectedResult: Float = -4.7
+        let actualResult = arithmetic.arithmetic(expression1, expression2: expression2, operation: .addition)
         
-        XCTAssertEqual(arithmetic.arithmetic(expression1, expression2: expression2, operation: .addition), expectedResult)
+        XCTAssertEqual(actualResult, expectedResult)
 
     }
     
